@@ -14,10 +14,10 @@ public class FileCreation {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         MethodsClass methods = new MethodsClass("index.html");
-        System.out.println("Enter your string");
-        String input = scan.nextLine();
-        methods.Write(input);
-        System.out.println("Input was successful");
+        MethodsClass method = new MethodsClass();
+        System.out.print("Please enter file name ");
+        String name = scan.nextLine();
+        System.out.println(method.CheckFile(name));
     }//end of main
     
 }

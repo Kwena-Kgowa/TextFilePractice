@@ -11,6 +11,7 @@ import java.io.IOException;
 public class MethodsClass 
 {
     private static String _fileName;
+    public MethodsClass(){};
     public MethodsClass(String fileName)
     {
         _fileName = fileName; 
@@ -32,5 +33,14 @@ public class MethodsClass
             System.out.println(e);
         }
     }//end of the method
-
+    
+    public boolean CheckFile(String fileName)
+    {
+        File fileObj = new File(fileName);
+        if(!fileObj.exists())
+            return false;
+        else
+            return true;
+    }
+    
 }
