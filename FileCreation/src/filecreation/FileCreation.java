@@ -10,14 +10,15 @@ import java.util.Scanner;
  * @author Kwena Martin
  */
 public class FileCreation {
+    public static Scanner scan = new Scanner(System.in);
     
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        MethodsClass methods = new MethodsClass("index.html");
+        
+        MethodsClass methods = new MethodsClass("index.txt");
         MethodsClass method = new MethodsClass();
-        System.out.print("Please enter file name ");
-        String name = scan.nextLine();
-        System.out.println(method.CheckFile(name));
-    }//end of main
+        
+        methods.AdvancedWrite("Kwena");
+        
+    }//end of main3
     
 }
