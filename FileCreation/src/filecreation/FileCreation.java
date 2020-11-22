@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 package filecreation;
-import java.io.File;
-import java.io.PrintWriter;
-import java.io.IOException;
+import java.util.Scanner;
 /**
  *
  * @author Kwena Martin
@@ -14,18 +12,12 @@ import java.io.IOException;
 public class FileCreation {
     
     public static void main(String[] args) {
-        File fileObj = new File("index.html");
-        try
-        {
-            if(!fileObj.exists())
-                fileObj.createNewFile();
-            PrintWriter pw = new PrintWriter(fileObj);
-            pw.println("<h1>Hello world</h1>");
-            pw.close();
-        }catch(Exception e)
-        {
-            System.out.println(e);
-        }
-    }
+        Scanner scan = new Scanner(System.in);
+        MethodsClass methods = new MethodsClass("index.html");
+        System.out.println("Enter your string");
+        String input = scan.nextLine();
+        methods.Write(input);
+        System.out.println("Input was successful");
+    }//end of main
     
 }

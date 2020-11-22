@@ -10,10 +10,27 @@ import java.io.IOException;
 
 public class MethodsClass 
 {
-
-    public static void Write()
+    private static String _fileName;
+    public MethodsClass(String fileName)
     {
-        
+        _fileName = fileName; 
     }
+
+    public void Write(String input)
+    {
+        File fileObj = new File(_fileName);
+        try
+        {
+            if(!fileObj.exists())
+                fileObj.createNewFile();
+            
+            PrintWriter pw = new PrintWriter(fileObj);
+            pw.println(input);
+            pw.close();
+        }catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }//end of the method
 
 }
