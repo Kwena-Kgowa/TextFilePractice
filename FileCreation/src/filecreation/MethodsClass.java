@@ -37,7 +37,7 @@ public class MethodsClass
         }
     }//end of the method
     
-    public void AdvancedWrite(String word)
+    public void AdvancedWrite(String[] myArray)
     {
         BufferedReader br;
         File myFile = new File("index.txt");
@@ -51,15 +51,20 @@ public class MethodsClass
             ArrayList<String> newLines = new ArrayList<String>(){};
             while((line = br.readLine()) != null)
             {
-                System.out.println(line);
-                newLines.add(line);
+                newLines.add(line); 
             }
-            for(String l : newLines)
-                System.out.println(l);
+            
+            for(String input : myArray)
+                newLines.add(input);
+            
+            PrintWriter pw = new PrintWriter(_fileName);
+            for(String inputs : newLines)
+                pw.println(inputs);
+            pw.close();
             
         }catch(Exception e)
         {
-            
+            System.out.println("Exit");
         }
     }//end of AdvancedWrite()
     

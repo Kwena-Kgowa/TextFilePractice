@@ -17,8 +17,7 @@ public class FileCreation {
         MethodsClass methods = new MethodsClass("index.txt");
         MethodsClass method = new MethodsClass();
         
-        methods.AdvancedWrite("Kwena");
-        
+        methods.ReadFile();
     }//end of main3
     
 }
